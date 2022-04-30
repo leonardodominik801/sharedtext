@@ -55,6 +55,7 @@ def read_file():
     return data
 
 def write_file(text):
+    text = '\n'.join(text.splitlines()) # always use LF when writing
     with open(FILE, 'w') as f:
         f.write(text)
 
